@@ -116,10 +116,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     "total_product" => $total_products,
                     "resultData" => $results
                 );  
-
+				
     }
-    header('Content-Type: application/json');
-    echo json_encode($json);
+    
 
 else{
      $json  = array("status" => "0", "msg" => "Invalid Request");
