@@ -1,9 +1,9 @@
 <?php
 include_once './profile.php';
-include_once './data.config.php';
+include_once './config.php';
 $profileObj = new Profile();
 
-$base_home = 'http://www.link2connect.in/';
+$base_home = 'index1.html';
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $token = isset($_REQUEST['token']) ? $_REQUEST['token'] : "" ;
     
