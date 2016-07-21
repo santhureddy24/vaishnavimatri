@@ -1,19 +1,13 @@
 <?php
 include_once './profile.php';
-include_once './config.php';
+include_once './data.config.php';
 $profileObj = new Profile();
 
 $base_home = 'index1.html';
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    $token = isset($_REQUEST['token']) ? $_REQUEST['token'] : "" ;
+   
     
-    if(!($token == TOKEN)){
-         $json  = array("status" => "0", "msg" => "Invalid Token");
-         header('Content-Type: application/json');
-         echo json_encode($json);
-         die();
-    }
-    else{
+    
          $menu_list = $profileObj->getProfileList();
          
          $json  = array(
@@ -22,7 +16,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     "resultData" => $menu_list
                 );  
 
-    }
+    
     header('Content-Type: application/json');
     echo json_encode($json);
     
@@ -107,13 +101,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $json = array();
     $results = array();
     
-    if(!($token == TOKEN)){
-         $json  = array("status" => "0", "msg" => "Invalid Token");
-         header('Content-Type: application/json');
-         echo json_encode($json);
-         die();
-    }
-    else{
+    if('')
+         {
          $total_products = $productObj->getTotalProducts($data);
          $results = $productObj->getProducts($data);
          
@@ -131,7 +120,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     }
     header('Content-Type: application/json');
     echo json_encode($json);
-}
+
 else{
      $json  = array("status" => "0", "msg" => "Invalid Request");
      header('Content-Type: application/json');
