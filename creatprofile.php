@@ -75,30 +75,30 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
      
      $data = array(
      
-     'pid' => $pid;
-     'name' => $name;
+     'pid' => $pid,
+     'name' => $name,
      
-     'sex' => $sex;
-     'edob' => $edob;
-     'caste' => $caste;
-     'subcaste' => $subcaste;
-     'height' => $height;
-     'specialcase' => $specialcase;
-     'religion' => $religion;
-     'mothertonque' => $mothertonque;
-     'maritalstatus' => $maritalstatus;
-     'smoking' => $smoking;
-	 'drinking' => $drinking;
-	 'habits' => $habits ;
-	 'complexion' => $complexion;
-	 'bodytype' => $bodytype;
-	 'qualification' => $qualification;
-	 'employedin' => $employedin;
-	 'occupation' => $occupation;
-	 'annualincome' => $annualincome;
-	 'countrypresidence' => $countrypresidence;
-	 'state' => $state;
-	 'aboutme' => $aboutme;
+     'sex' => $sex,
+     'edob' => $edob,
+     'caste' => $caste,
+     'subcaste' => $subcaste,
+     'height' => $height,
+     'specialcase' => $specialcase,
+     'religion' => $religion,
+     'mothertonque' => $mothertonque,
+     'maritalstatus' => $maritalstatus,
+     'smoking' => $smoking,
+	 'drinking' => $drinking,
+	 'habits' => $habits,
+	 'complexion' => $complexion,
+	 'bodytype' => $bodytype,
+	 'qualification' => $qualification,
+	 'employedin' => $employedin,
+	 'occupation' => $occupation,
+	 'annualincome' => $annualincome,
+	 'countrypresidence' => $countrypresidence,
+	 'state' => $state,
+	 'aboutme' => $aboutme
 	 
 	 );
 	 
