@@ -9,7 +9,7 @@ class registerprofile{
                 height, specialcase, religion, mothertonque, maritalstatus, smoking, 
                 drinking, ms.habits, complexion, bodytype, qualification, employedin, occupation, annualincome, 
                 countrypresidence, state, aboutme
-                FROM  orderfood";
+                FROM  profile";
 
         $results = array();
         $sql_query = mysql_query($sql);
