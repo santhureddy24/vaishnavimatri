@@ -1,6 +1,8 @@
 <?php 
 include_once './registerprofile.php';
+include_once './profile.php';
 include_once './data.config.php';
+$profileObj = new Profile();
 
 
 
@@ -35,7 +37,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     
 
 
-    $sql = "INSERT INTO profile(pid, name, sex, edob, caste, height, specialcase, religion, mothertonque, maritalstatus, smoking, drinking, habits, complexion, bodytype,
+    $sql = "INSERT INTO orderfood(pid, name, sex, edob, caste, height, specialcase, religion, mothertonque, maritalstatus, smoking, drinking, habits, complexion, bodytype,
 	qualification, employedin, occupation, annualincome, countrypresidence, state, aboutme)
     VALUES('$pid', '$name', '$sex', '$edob', '$caste', '$height', '$specialcase', '$religion', '$mothertonque', '$maritalstatus', '$smoking', '$drinking', '$habits', '$complexion',
 	'$bodytype', '$qualification', '$employedin', '$occupation', '$annualincome', '$countrypresidence', '$state', '$aboutme')";
