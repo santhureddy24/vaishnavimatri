@@ -10,8 +10,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     
     
     
-     
-     $name = isset($_POST['name']) ? $_POST['name'] : "" ; 
+      $pid = isset($_POST['pid']) ? $_POST['pid'] : "" ; 
+   $name = isset($_POST['name']) ? $_POST['name'] : "" ; 
      $sex= isset($_POST['sex']) ? $_POST['sex'] : "" ; 
      $edob = isset($_POST['edob']) ? $_POST['edob'] : "" ; 
      $caste = isset($_POST['caste']) ? $_POST['caste'] : "" ; 
@@ -33,23 +33,28 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
      $countrypresidence = isset($_POST['countrypresidence']) ? $_POST['countrypresidence'] : "" ;
      $state = isset($_POST['state']) ? $_POST['state'] : "" ;
 	  $aboutme = isset($_POST['aboutme']) ? $_POST['aboutme'] : "" ;
-     
     
-    
-     
+
+
+    $sql = "INSERT INTO orderfood(pid, name, sex, edob, caste, height, specialcase, religion, mothertonque, maritalstatus, smoking, drinking, habits, complexion, bodytype,
+	qualification, employedin, occupation, annualincome, countrypresidence, state, aboutme)
+    VALUES('$pid', '$name', '$sex', '$edob', '$caste', '$height', '$specialcase', '$religion', '$mothertonque', '$maritalstatus', '$smoking', '$drinking', '$habits', '$complexion',
+	'$bodytype', '$qualification', '$employedin', '$occupation', '$annualincome', '$countrypresidence', '$state', '$aboutme')";
+$query123 = mysql_query($sql) or trigger_error(mysql_error()." ".$sql);
+
+echo "$query123";
      
    
 
      
      
-     $data = array(
+   $data = array(
      
      'pid' => $pid,
      'name' => $name,
      'sex' => $sex,
      'edob' => $edob,
      'caste' => $caste,
-     'subcaste' => $subcaste,
      'height' => $height,
      'specialcase' => $specialcase,
      'religion' => $religion,
@@ -75,8 +80,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $json = array();
     $results = array();
 }
-   
-else{
+    
+    
+   else{
      $json  = array("status" => "0", "msg" => "Invalid Request");
      header('Content-Type: application/json');
      echo json_encode($json); 
