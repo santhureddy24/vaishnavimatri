@@ -36,7 +36,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     
 
 
-    $sql = "INSERT INTO orderfood(pid, name, sex, edob, caste, height, specialcase, religion, mothertonque, maritalstatus, smoking, drinking, habits, complexion, bodytype,
+    $sql = "INSERT INTO profile(pid, name, sex, edob, caste, height, specialcase, religion, mothertonque, maritalstatus, smoking, drinking, habits, complexion, bodytype,
 	qualification, employedin, occupation, annualincome, countrypresidence, state, aboutme)
     VALUES('$pid', '$name', '$sex', '$edob', '$caste', '$height', '$specialcase', '$religion', '$mothertonque', '$maritalstatus', '$smoking', '$drinking', '$habits', '$complexion',
 	'$bodytype', '$qualification', '$employedin', '$occupation', '$annualincome', '$countrypresidence', '$state', '$aboutme')";
@@ -78,7 +78,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	 
      
     $json = array();
-   if()){
+   if(!($data1 == registerProfile)){
          $json  = array("status" => "0", "msg" => "Invalid Token");
          header('Content-Type: application/json');
          echo json_encode($json);
