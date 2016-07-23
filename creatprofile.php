@@ -78,14 +78,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	 
      
     $json = array();
-   if(!($data1 == registerProfile)){
+   if(!($data == registerProfile)){
          $json  = array("status" => "0", "msg" => "Invalid Token");
          header('Content-Type: application/json');
          echo json_encode($json);
          die();
     }
     else{
-        $results = $account->registerProfile($data);
+        $results = $profileObj->registerProfile($data);
         
         if($results==2){
              $json  = array("status" => "0", "msg" => "Email id Already Exists",'resultData' => $results);   
