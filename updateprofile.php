@@ -9,7 +9,7 @@ class Profile{
                 height, specialcase, religion, mothertonque, maritalstatus, smoking, 
                 drinking, ms.habits, complexion, bodytype, qualification, employedin, occupation, annualincome, 
                 countrypresidence, state, aboutme
-                FROM  profile
+                FROM  orderfood
                 
             ";
 
@@ -49,9 +49,78 @@ class Profile{
             $results[] = $row_result;
         }*/
         return $results;
-		header('Content-Type: application/json');
-     echo json_decode($data); 
 
     }
+	
+	public function registerprofile(){
+        
+        $sql = "INSERT INTO create_profile(pid, gender, email, firstname, lastname, postedby, edob, religion, caste, mothertongue, residing, mobileno, phoneno, maritalstatus, complexion,
+	phisicallychallenged, height, borncitizenship, educationcategory, specialization, employedin, 
+	professiongroup, profession, companyname, monthlysalary, state, district, city, fathername,
+	 fathereducation, fatherprofession, mothername, mothereducation, motherprofession, fathernative, mothernative, brothers, sisters)
+    VALUES('NULL', '$gender', '$email', '$firstname', '$lastname', '$postedby', '$edob', '$religion', '$caste', '$mothertongue', '$residing',
+	'$mobileno', '$phoneno', '$maritalstatus','$complexion', '$phisicallychallenged', '$height', '$borncitizenship', '$educationcategory', 
+	'$specialization', '$employedin', '$professiongroup', '$profession', '$companyname', '$monthlysalary', '$state', '$district', '$city', '$fathername',
+	 '$fathereducation', '$fatherprofession', '$mothername', '$mothereducation', '$motherprofession',
+	  '$fathernative', '$mothernative', '$brothers', '$sisters')";
+	$query123 = mysql_query($sql) or trigger_error(mysql_error()." ".$sql);
+
+	echo "$query123";
+     
+   
+
+     
+     
+   $data = array(
+     
+     'pid' => $pid,
+     'gender' => $gender,
+     'email' => $email,
+     'firstname' => $firstname,
+     'lastname' => $lastname,
+     'postedby' => $postedby,
+     'edob' => $edob,
+     'religion' => $religion,
+     'caste' => $caste,
+     'mothertongue' => $mothertongue,
+     'residing' => $residing,
+	 'mobileno' => $mobileno,
+	 'phoneno' => $phoneno,
+	 'maritalstatus' => $maritalstatus,
+	 'complexion' => $complexion,
+	 'phisicallychallenged' => $phisicallychallenged,
+	 'height' => $height,
+	 'borncitizenship' => $borncitizenship,
+	 'educationcategory' => $educationcategory,
+	 'specialization' => $specialization,
+	 'employedin' => $employedin,
+	 'professiongroup' => $professiongroup,
+     'profession' => $profession,
+     'companyname' => $companyname,
+     'monthlysalary' => $monthlysalary,
+     'state' => $state,
+     'district' => $district,
+	 'city' => $city,
+     'fathername' => $fathername,
+     'fathereducation' => $fathereducation,
+     'fatherprofession' => $fatherprofession,
+     'mothername' => $mothername,
+     'mothereducation' => $mothereducation,
+	 'motherprofession' => $motherprofession,
+     'fathernative' => $fathernative,
+     'mothernative' => $mothernative,
+     'brothers' => $brothers,
+     'sisters' => $sisters
+	 
+	 );
+	 
+	 
+     
+    $json = array();
+    $results = array();
+
+      header('Content-Type: application/json');
+     echo json_encode($data); 
+}
     
 }
