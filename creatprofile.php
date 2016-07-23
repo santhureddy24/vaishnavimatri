@@ -36,7 +36,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     
 
 
-    $data = array(
+    $sql = "INSERT INTO orderfood(pid, name, sex, edob, caste, height, specialcase, religion, mothertonque, maritalstatus, smoking, drinking, habits, complexion, bodytype,
+	qualification, employedin, occupation, annualincome, countrypresidence, state, aboutme)
+    VALUES('$pid', '$name', '$sex', '$edob', '$caste', '$height', '$specialcase', '$religion', '$mothertonque', '$maritalstatus', '$smoking', '$drinking', '$habits', '$complexion',
+	'$bodytype', '$qualification', '$employedin', '$occupation', '$annualincome', '$countrypresidence', '$state', '$aboutme')";
+	$query123 = mysql_query($sql) or trigger_error(mysql_error()." ".$sql);
+
+	echo "$query123";
+     
+   
+
+     
+     
+   $data = array(
      
      'pid' => $pid,
      'name' => $name,
@@ -66,16 +78,31 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	 
      
     $json = array();
-    $results = array();
+   if()){
+         $json  = array("status" => "0", "msg" => "Invalid Token");
+         header('Content-Type: application/json');
+         echo json_encode($json);
+         die();
+    }
+    else{
+        $results = $account->registerProfile($data);
+        
+        if($results==2){
+             $json  = array("status" => "0", "msg" => "Email id Already Exists",'resultData' => $results);   
+        }
+        elseif($results==0) {
+             $json  = array("status" => "0", "msg" => "Registration Failed",'resultData' => $results);   
+        }
+        else{
+            $json  = array("status" => "1", "msg" => "Registr Successfully",'resultData' => $results);
+        }
+
+    }
+    header('Content-Type: application/json');
+    echo json_encode($json);
 
       header('Content-Type: application/json');
      echo json_encode($data);
- 
-   
-
-     
-     
-   
 
 }
     
