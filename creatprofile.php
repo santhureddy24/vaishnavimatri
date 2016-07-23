@@ -101,13 +101,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     header('Content-Type: application/json');
     echo json_encode($json);
 
-      header('Content-Type: application/json');
-     echo json_encode($data);
+    
 
 }
     
    else{
      $json  = array("status" => "0", "msg" => "Invalid Request");
+	 header('Content-Type: application/json');
+     echo json_encode($json); 
       
 }
 
