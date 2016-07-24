@@ -1,0 +1,704 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Marital</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Marital Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+		Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<link href="css/bootstrap-3.1.1.min.css" rel='stylesheet' type='text/css' />
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/ui/1.8.3/jquery-ui.js"></script>
+		<!-- Custom Theme files -->
+		<link href="css/style.css" rel='stylesheet' type='text/css' />
+		<link href='//fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
+		<link href='//fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
+		<!----font-Awesome----->
+		<link href="css/font-awesome.css" rel="stylesheet"> 
+		<!----font-Awesome----->
+		<script>
+			$(document).ready(function(){
+				$(".dropdown").hover(            
+				function() {
+					$('.dropdown-menu', this).stop( true, true ).slideDown("fast");
+					$(this).toggleClass('open');        
+				},
+				function() {
+					$('.dropdown-menu', this).stop( true, true ).slideUp("fast");
+					$(this).toggleClass('open');       
+				}
+				);
+				
+				/* For Tab next button function */
+				
+				$('.nxt_btn').click(function(){
+					$('.nav-tabs > .active').next('li').find('a').trigger('click')
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<!-- ============================  Navigation Start =========================== -->
+		<div class="navbar navbar-inverse-blue navbar">
+			<!--<div class="navbar navbar-inverse-blue navbar-fixed-top">-->
+			<div class="navbar-inner navbar-inner_1">
+				<div class="container">
+					<!-- <div class="navigation">
+						<nav id="colorNav">
+						<ul>
+						<li class="green">
+						<a href="#" class="icon-home"></a>
+						<ul>
+						<li><a href="login.html">Login</a></li>
+					    <li><a href="register.html">Register</a></li>
+					    <li><a href="index.html">Logout</a></li>
+						</ul>
+						</li>
+						</ul>
+						</nav>
+					</div> -->
+					<a class="brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+					<div class="pull-right">
+						<nav class="navbar nav_bottom" role="navigation">
+							<!-- Brand and toggle get grouped for better mobile display -->
+							<div class="navbar-header nav_2">
+								<button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">Menu
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+								<a class="navbar-brand" href="#"></a>
+							</div> 
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+								<ul class="nav navbar-nav nav_1">
+									
+										
+										<li class="dropdown">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown">User Name<span class="caret"></span></a>
+											<ul class="dropdown-menu" role="menu">
+												<li><a href="search.html">Logout</a></li>
+											</ul>
+										</li>
+										<!--<li class="dropdown">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile<span class="caret"></span></a>
+											<ul class="dropdown-menu" role="menu">
+											<li><a href="search.html">Edit my profile</a></li>
+											<li><a href="profile.html">Edit my contact detail</a></li>
+											<li><a href="search-id.html">Edit my Bio-data</a></li>
+											<li><a href="search-id.html">Upload photo</a></li>
+											</ul>
+										</li>-->
+										
+									</ul>
+								</div><!-- /.navbar-collapse -->
+							</nav>
+						</div> <!-- end pull-right -->
+						<div class="clearfix"> </div>
+					</div> <!-- end container -->
+				</div> <!-- end navbar-inner -->
+			</div> <!-- end navbar-inverse-blue -->
+			<!-- ============================  Navigation End ============================ -->
+			<div class="grid_3">
+				<div class="container">
+					
+					<div class="col-md-12 members_box2">
+						<h3 style="text-align:center;">Create profile details</h3>
+						<div class="col_4">
+							<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+								<ul id="myTab" class=" nav-tabs nav-tabs1 nav-tab-pnt" role="tablist">
+									<li role="presentation" class="active"><a href="#home" id="" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Basic details</a></li>
+									<li role="presentation"><a href="#profile" role="tab" id="" data-toggle="tab" aria-controls="profile">Profile details</a></li>
+									<li role="presentation"><a href="#profile1" role="tab" id="" data-toggle="tab" aria-controls="profile">Family details</a></li>
+									<li role="presentation"><a href="#profile2" role="tab" id="" data-toggle="tab" aria-controls="profile">photos upload</a></li>
+								</ul>
+								<form  id="" method="post" role="form" action="createprofile.php "style="display: block;">
+								<div id="myTabContent" class="tab-content">
+									
+														<div role="tabpanel" class="tab-pane fade in active form-2" id="home" aria-labelledby="home-tab">
+														<div class="clearfix"> </div>
+															<p class="float">
+																<label for="Email"><i class="icon-lock"></i>gender</label>
+																<input type="radio" name="gender" value="Male" checked>&nbsp; Male &nbsp;
+																<input type="radio" name="gender" value="Male">&nbsp; FeMale
+															</p>
+															<p class="float">
+																<label for="Email"><i class="icon-lock"></i>Email</label>
+																<input type="text" name="email" placeholder="Email" class="showpassword">
+															</p>
+															<p class="float">
+																<label for="Firstname"><i class="icon-user"></i>Firstname</label>
+																<input type="text" name="firstname" placeholder="Firstname">
+															</p>
+															<p class="float">
+																<label for="Lastname"><i class="icon-lock"></i>Lastname</label>
+																<input type="text" name="lastname" placeholder="Lastname" class="showpassword">
+															</p>
+															<p class="float">
+																<label for="Posted by"><i class="icon-user"></i>Posted by</label>
+																<select name="postedby">
+																	<option value="None">None</option>
+																	<option value="Self">Self</option>
+																	<option value="Father">Father</option>
+																	<option value="Mother">Mother</option>
+																	<option value="Others">Others</option>
+																</select> 
+															</p>
+															<p class="float2">
+																<label for="Date"><i class="icon-lock"></i>Date</label>
+																<select name="date">
+																	<option value="">Date</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																	<option value="">31</option>
+																</select>
+															</p>
+															<p class="float2">
+																<label for="Month"><i class="icon-lock"></i>Month</label>
+																<select name="month">
+																	<option value="">Month</option>
+																	<option value="">January</option>
+																	<option value="">February</option>
+																	<option value="">March</option>
+																	<option value="">April</option>
+																	<option value="">May</option>
+																	<option value="">June</option>
+																	<option value="">July</option>
+																	<option value="">August</option>
+																	<option value="">September</option>
+																	<option value="">October</option>
+																	<option value="">November</option>
+																	<option value="">December</option>
+																</select>
+															</p>
+															<p class="float2">
+																<label for="year"><i class="icon-lock"></i>year</label>
+																<select name="year">
+																	<option value="">Year</option>
+																	<option value="">1980</option>
+																	<option value="">1981</option>
+																	<option value="">1982</option>
+																	<option value="">1983</option>
+																	<option value="">1984</option>
+																	<option value="">1985</option>
+																	<option value="">1986</option>
+																	<option value="">1987</option>
+																	<option value="">1988</option>
+																	<option value="">1989</option>
+																	<option value="">1990</option>
+																	<option value="">1991</option>
+																	<option value="">1992</option>
+																	<option value="">1993</option>
+																	<option value="">1994</option>
+																	<option value="">1995</option>
+																	<option value="">1996</option>
+																	<option value="">1997</option>
+																	<option value="">1998</option>
+																	<option value="">1999</option>
+																	<option value="">2000</option>
+																	<option value="">2001</option>
+																	<option value="">2002</option>
+																	<option value="">2003</option>
+																	<option value="">2004</option>
+																	<option value="">2005</option>
+																	<option value="">2006</option>
+																	<option value="">2007</option>
+																	<option value="">2008</option>
+																	<option value="">2009</option>
+																	<option value="">2010</option>
+																	<option value="">2011</option>
+																	<option value="">2012</option>
+																	<option value="">2013</option>
+																	<option value="">2014</option>
+																	<option value="">2015</option>
+																</select>
+															</p>
+														</p>
+														<p class="float">
+															<label for="Religion"><i class="icon-user"></i>Religion</label>
+															<select name="religion">
+																<option value="">Select Religion</option>
+																<option value="Hindu">Hindu</option>
+																<option value="Muslim">Muslim</option>
+																<option value="Christian">Christian</option>
+																<option value="OTHE">Others</option>
+															</select>
+														</p>
+														<p class="float">
+															<label for="Caste"><i class="icon-lock"></i>Caste</label>
+															<select name="caste">
+																<option value="" disabled="disabled">------------------------hindu caste------------------------</option>
+																<option disabled="disabled"></option>
+																<option value="">Select Caste</option>
+																<option value="nadar">nadar</option>
+																<option value="konar">konar</option>
+																<option value="devar">devar</option>
+																<option value="kallan">kallan</option>
+																<option value="Others">Others</option>
+																<option value="" disabled="disabled">------------------------christian caste------------------------</option>
+																<option disabled="disabled"></option>
+																<option value="Christian roman catholic">Christian roman catholic</option>
+																<option value="Christian benthocosth">Christian benthocosth</option>
+																<option value="Christian CSI">Christian CSI</option>
+																<option disabled="disabled"></option>
+																<option value="" disabled="disabled">------------------------muslim caste------------------------</option>
+																<option disabled="disabled"></option>
+																<option value=" muslim ali">muslim ali</option>
+																<option value="muslim jin">muslim jin</option>
+																<option value="muslim">muslim</option>
+																</select
+															</p>
+															<p class="float">
+																<label for="Mother Tongue"><i class="icon-user"></i>Mother Tongue</label>
+																<select name="mothertongue" >
+																	<option value="">Select Mother Tongue</option>
+																	<option value="Hindi">Hindi</option>
+																	<option value="Marathi">Marathi</option>
+																	<option value="Monpa">Monpa</option>
+																	<option value="Nicobarese">Nicobarese</option>
+																	<option value="Nepali">Nepali</option>
+																	<option value="Portuguese">Portuguese</option>
+																	<option value="Pushtu">Pushtu</option>
+																	<option value="Rajasthani">Rajasthani</option>
+																	<option value="Sanskrit">Sanskrit</option>
+																	<option value="Santhali">Santhali</option>
+																	<option value="Singhalese">Singhalese</option>
+																	<option value="Sourashtra">Sourashtra</option>
+																	<option value="Tripuri">Tripuri</option>
+																	<option value="Tulu">Tulu</option>
+																	<option value="Others">Others</option>
+																</select>
+															</p>
+															<p class="float">
+																<label for="Residing"><i class="icon-lock"></i>Residing</label>
+																<select name="residing" >
+																	<option value="">Select Country</option>
+																	<option value="India" selected="selected">India</option>
+																	<option value="United States of America">United States of America</option>
+																	<option value="Pakistan">Pakistan</option>
+																	<option value="United Arab Emirates">United Arab Emirates</option>
+																	<option value="United Kingdom">United Kingdom</option>
+																	<option value="Australia">Australia</option>
+																	<option value="Saudi Arabia">Saudi Arabia</option>
+																	<option value="Bangladesh">Bangladesh</option>
+																	<option value="Canada">Canada</option>
+																	<option value="Afghanistan">Afghanistan</option>
+																	<option value="Albania">Albania</option>
+																	<option value="Algeria">Algeria</option>
+																	<option value="American Samoa">American Samoa</option>
+																	<option value="Andorra">Andorra</option>
+																</select> 
+															</p>
+															<p class="float">
+																<label for="Mobile No"><i class="icon-user"></i>Mobile No</label>
+																<input type="text" name="mobileNo" placeholder="MobileNo">
+															</p>
+															<p class="float">
+																<label for="Phone No"><i class="icon-lock"></i>Phone No</label>
+																<input type="text" name="phoneNo" placeholder="PhoneNo" class="showpassword">
+															</p>
+															<p class="clearfix">
+																<input type="button" name="next" value="Next" class="btn_1 nxt_btn" />
+															</p>
+														</div>
+														<div role="tabpanel" class="tab-pane fade form-2" id="profile" aria-labelledby="profile-tab">
+														<div class="clearfix"> </div>
+															<p class="float">
+																<label for="Matrial Status"><i class="icon-user"></i>Matrial Status</label>
+																<select name="matrialStatus">
+																	<option value="">Select Marital Status </option>
+																	<option value="Never Married" selected="selected">Never Married</option>
+																	<option value="Annulled">Annulled</option>
+																	<option value="Divorced">Divorced</option>
+																	<option value="Widowed">Widowed</option>
+																</select> 
+															</p>
+															<p class="float">
+																<label for="Complexion"><i class="icon-lock"></i>Complexion</label>
+																<select name="complexion">
+																	<option value=""></option>
+																	<option value="Very_Fair" selected="VERY_FAIR">Very_Fair</option>
+																	<option value="Fair">Fair</option>
+																	<option value="Wheatish">Wheatish</option>
+																	<option value="Wheatish_Medium">Wheatish_Medium</option>
+																	<option value="Dark">Dark</option>
+																</select> 
+															</p>
+															<p class="float">
+																<label for="Phisically Challenged"><i class="icon-user"></i>Phisically Challenged</label>
+																<select name="phisicallyChallenged" >
+																	<option value="yes">yes</option>
+																	<option value="no">no</option>
+																</select> 
+															</p>
+															<p class="float">
+																<label for="Height"><i class="icon-lock"></i>Height</label>
+																<select id="height" name="Height" >
+																	<option value="">Select Height</option>
+																	<option value="FT4_IN5">4ft 5in</option>
+																	<option value="FT4_IN6">4ft 6in</option>
+																	<option value="FT4_IN7">4ft 7in</option>
+																	<option value="FT4_IN8">4ft 8in</option>
+																	<option value="FT4_IN9">4ft 9in</option>
+																	<option value="FT4_IN10">4ft 10in</option>
+																	<option value="FT4_IN11">4ft 11in</option>
+																	<option value="FT5_IN0">5ft</option>
+																	<option value="FT5_IN1">5ft 1in</option>
+																	<option value="FT5_IN2">5ft 2in</option>
+																	<option value="FT5_IN3">5ft 3in</option>
+																	<option value="FT5_IN4">5ft 4in</option>
+																	<option value="FT5_IN5">5ft 5in</option>
+																	<option value="FT5_IN6">5ft 6in</option>
+																	<option value="FT5_IN7">5ft 7in</option>
+																	<option value="FT5_IN8">5ft 8in</option>
+																	<option value="FT5_IN9">5ft 9in</option>
+																	<option value="FT5_IN10">5ft 10in</option>
+																	<option value="FT5_IN11">5ft 11in</option>
+																	<option value="FT6_IN0">6ft</option>
+																	<option value="FT6_IN1">6ft 1in</option>
+																	<option value="FT6_IN2">6ft 2in</option>
+																	<option value="FT6_IN3">6ft 3in</option>
+																	<option value="FT6_IN4">6ft 4in</option>
+																	<option value="FT6_IN5">6ft 5in</option>
+																	<option value="FT6_IN6">6ft 6in</option>
+																	<option value="FT6_IN7">6ft 7in</option>
+																	<option value="FT6_IN8">6ft 8in</option>
+																	<option value="FT6_IN9">6ft 9in</option>
+																	<option value="FT6_IN10">6ft 10in</option>
+																	<option value="FT6_IN11">6ft 11in</option>
+																	<option value="FT7_IN0">7ft</option>
+																</select>
+															</p>
+															<p class="float">
+																<label for="Born Citizenship"><i class="icon-user"></i>Born Citizenship</label>
+																<select name="borncitizenship" >
+																	<option value="">Select Country</option>
+																	<option value="INDI" selected="selected">India</option>
+																	<option value="UNIT">United States of America</option>
+																	<option value="PAKI">Pakistan</option>
+																	<option value="UNAE">United Arab Emirates</option>
+																	<option value="UNIK">United Kingdom</option>
+																	<option value="AUST">Australia</option>
+																	<option value="SAUD">Saudi Arabia</option>
+																	<option value="BANG">Bangladesh</option>
+																	<option value="CANA">Canada</option>
+																	<option value="AFGH">Afghanistan</option>
+																	<option value="ALBA">Albania</option>
+																	<option value="ALGE">Algeria</option>
+																	<option value="AMER">American Samoa</option>
+																	<option value="ANDO">Andorra</option>
+																</select> 
+															</p>
+															<p class="float">
+																<label for="Education Category"><i class="icon-lock"></i>Education Category</label>
+																<select  name="educationcategory">
+																	<option value="">Select your degree</option>
+																	
+																	<option value="" disabled="disabled">------------------------PG-General Courses------------------------</option>
+																	<option disabled="disabled"></option>
+																	<option value="MCOM">M.Com. (Commerce)</option>
+																	<option value="MSCP">M.Sc. (Science)</option>
+																	<option value="MAPG">MA (Arts)</option>
+																	<option disabled="disabled"></option>
+																	<option value="" disabled="disabled">------------------------Ug-General Courses------------------------</option>
+																	<option disabled="disabled"></option>
+																	<option value="BCOM">B.Com. (Commerce)</option>
+																	<option value="BSC">B.Sc. (Science)</option>
+																	<option value="BA">BA (Arts)</option>
+																	<option disabled="disabled"></option>
+																	<option value="" disabled="disabled">------------------------Medicine (General,Dental,Surgeon)------------------------</option>
+																	<option disabled="disabled"></option>
+																	<option value="MPHA">M.Pharm. (Pharmacy)</option>
+																	<option value="MVSC">M.V.Sc. (Veterinary Science)</option>
+																	<option value="MBBS">MBBS</option>
+																	<option disabled="disabled"></option>
+																	
+																	<option value="" disabled="disabled">------------------------12th but not pursuing graduation------------------------</option>
+																	<option disabled="disabled"></option>
+																	<option value="SSSL">12th</option>
+																	<option disabled="disabled"></option>
+																	<option value="" disabled="disabled">------------------------10th but not pursuing 12th------------------------</option>
+																	<option di
+																	sabled="disabled"></option>
+																	<option value="HGSC">10th</option>
+																	<option disabled="disabled"></option>
+																</select>
+															</p>
+															<p class="float">
+																<label for="Specialization"><i class="icon-lock"></i>Specialization</label>
+																<select  name="specialization">
+																	<option value="">Select your specialization</option>
+																	<option value="" disabled="disabled">------------------------PG-General Courses------------------------</option>
+																	<option disabled="disabled"></option>
+																	<option value="history">history</option>
+																	<option value="science">Science</option>
+																	<option value="commerce">commerce</option>
+																	<option disabled="disabled"></option>
+																	<option value="" disabled="disabled">------------------------Ug-General Courses------------------------</option>
+																	<option disabled="disabled"></option>
+																	<option value="history">history</option>
+																	<option value="science">Science</option>
+																	<option value="commerce">commerce</option>
+																	<option disabled="disabled"></option>
+																	<option value="" disabled="disabled">------------------------Medicine (General,Dental,Surgeon)------------------------</option>
+																	<option disabled="disabled"></option>
+																	<option value="pharmacy"> (Pharmacy)</option>
+																	<option value="veter science"> (Veterinary Science)</option>
+																	<option value="MBBS">MBBS</option>
+																	<option disabled="disabled"></option>
+																</select>
+															</p>
+															<p class="float">
+																<label for="Employed in"><i class="icon-lock"></i>Employed in</label>
+																<select name="employedin">
+																	<option value="">Select Employed In</option>
+																	<option value="MNC">MNC</option>
+																	<option value="CENTRAL_GOVERNMENT">Central Government</option>
+																	<option value="STATE_GOVERNMENT">State Government</option>
+																	<option value="PRIVATE_SECTOR">Private Sector</option>
+																	<option value="PUBLIC_SECTOR">Public Sector</option>
+																	<option value="NOT_WORKING">Not Working</option>
+																	<option value="OTHERS">Others</option>
+																</select>
+															</p>
+															<p class="float">
+																<label for="profession group"><i class="icon-lock"></i>profession group</label>
+																<select name="professiongroup">
+																	<option value="">Select profession group</option>
+																	<option value="IT and technology">IT and technology</option>
+																	<option value="teching">techning</option>
+																	<option value="Agriculture">Agriculture</option>
+																	<option value="banking">banking</option>
+																	<option value="media">media</option>
+																	<option value="OTHERS">Others</option>
+																</select>
+															</p>
+															<p class="float">
+																<label for="profession"><i class="icon-lock"></i>profession</label>
+																<select name="profession">
+																	<option value="" disabled="disabled">------------------------IT and technology------------------------</option>
+																	<option disabled="disabled"></option>
+																	<option value="software enginner">software enginner</option>
+																	<option value="web developer">web developer</option>
+																	<option value="senior software engineer">senior software engineer</option>
+																	<option disabled="disabled"></option>
+																	<option value="" disabled="disabled">------------------------Teching------------------------</option>
+																	<option disabled="disabled"></option>
+																	<option value="lecture">lecture</option>
+																	<option value="institute lecture">institute lecture</option>
+																	<option value="school teacher">school teacher</option>
+																	<option value="professor">professor</option>
+																	<option disabled="disabled"></option>
+																	<option value="" disabled="disabled">------------------------Agriculture------------------------</option>
+																	<option disabled="disabled"></option>
+																	<option value="Agriculture pro">Agriculture pro</option>
+																	<option value="agri inspector">agri inspector</option>
+																	<option value="agri clerk">agri clerk</option>
+																	<option disabled="disabled"></option>
+																	<option value="" disabled="disabled">------------------------banking------------------------</option>
+																	<option disabled="disabled"></option>
+																	<option value="manager">Manager</option>
+																	<option value="clerk">clerk</option>
+																	<option value="accountant">accountant</option>
+																</select>
+															</p>
+															<p class="float">
+																<label for="Company Name"><i class="icon-lock"></i>Company Name</label>
+																<input type="text" name="companyname" placeholder="Password" class="showpassword">
+															</p>
+															<p class="float">
+																<label for="Monthly Salary"><i class="icon-lock"></i>Monthly Salary</label>
+																<input type="text" name="monthlysalary" placeholder="Password" class="showpassword">
+															</p>
+															<p class="float">
+																<label for="State"><i class="icon-lock"></i>State</label>
+																<select name="state" >
+																	<option value="">Please Select</option>
+																	<option value="Andaman and Nicobar">Andaman and Nicobar</option>
+																	<option value="Andhra Pradesh">Andhra Pradesh</option>
+																	<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+																	<option value="Assam">Assam</option>
+																	<option value="Bihar">Bihar</option>
+																	<option value="Chandigarh">Chandigarh</option>
+																	<option value="Chhattisgarh">Chhattisgarh</option>
+																	<option value="Daman and Diu">Daman and Diu</option>
+																	<option value="Delhi">Delhi</option>
+																</select>
+															</p>
+															<p class="float">
+																<label for="District"><i class="icon-lock"></i>District</label>
+																<select name="district">
+																	<option value="">Please Select</option>
+																	<option value="Chennai">Chennai</option>
+																	<option value="Karaikudi">Karaikudi</option>
+																	<option value="Sivakanka">Sivakanka</option>
+																</select>
+															</p>
+															<p class="float">
+																<label for="City"><i class="icon-lock"></i>City</label>
+																<select name="city">
+																	<option value="">Please Select</option>
+																	<option value="Chennai">Chennai</option>
+																	<option value="Karaikudi">Karaikudi</option>
+																	<option value="Sivakanka">Sivakanka</option>
+																</select>
+															</p>
+															<p class="clearfix">
+																<input type="button" name="next" value="Next" class="btn_1 nxt_btn" />
+															</p>
+														</div>
+														<div role="tabpanel" class="tab-pane fade form-2" id="profile1" aria-labelledby="profile-tab">
+														<div class="clearfix"> </div>
+															<p class="float">
+																<label for="Father Name"><i class="icon-lock"></i>Father Name</label>
+																<input type="text" name="fathername" placeholder="Father Name" class="showpassword">
+															</p>
+															<p class="float">
+																<label for="Father's education"><i class="icon-lock"></i>Father's education</label>
+																<input type="text" name="fathereducation" placeholder="Father's education" class="showpassword">
+															</p>
+															<p class="float">
+																<label for="profession"><i class="icon-lock"></i>Fatherprofession</label>
+																<input type="text" name="fatherprofession" placeholder="Password" class="showpassword">
+															</p>
+															<p class="float">
+																<label for="Mother Name"><i class="icon-lock"></i>Mother Name</label>
+																<input type="text" name="mothername" placeholder="Password" class="showpassword">
+															</p>
+															<p class="float">
+																<label for="Mother Education"><i class="icon-lock"></i>Mother Education</label>
+																<input type="text" name="mothereducation" placeholder="Enter Mother Education" class="showpassword">
+															</p>
+															<p class="float">
+																<label for="Profession"><i class="icon-lock"></i>Profession</label>
+																<input type="text" name="motherprofession" placeholder="Enter Profession" class="showpassword">
+															</p>
+															<p class="float">
+																<label for="father's Native Place"><i class="icon-lock"></i>father's Native Place</label>
+																<input type="text" name="Fathernative" placeholder="father's Native Place" class="showpassword">
+															</p>
+															<p class="float">
+																<label for="mother's Native Place"><i class="icon-lock"></i>mother's Native Place</label>
+																<input type="text" name="mothernative" placeholder="mother's Native Place" class="showpassword">
+															</p>
+															<p class="float">
+																<label for="No of Brother"><i class="icon-lock"></i>No of Brother</label>
+																<select name="brothers">
+																	<option value="0">0</option>
+																	<option value="1">1</option>
+																	<option value="2">2</option>
+																	<option value="3">3</option>
+																	<option value="4">4</option>
+																	<option value="5">5</option>
+																	<option value="6">6</option>
+																	<option value="7">7</option>
+																	<option value="8">8</option>
+																	<option value="9">9</option>
+																	<option value="10">10</option>
+																</select>
+															</p>
+															<p class="float">
+																<label for="Sisters"><i class="icon-lock"></i>No of Sister</label>
+																<select name="No_of_sisters">
+																	<option value="0">0</option>
+																	<option value="1">1</option>
+																	<option value="2">2</option>
+																	<option value="3">3</option>
+																	<option value="4">4</option>
+																	<option value="5">5</option>
+																	<option value="6">6</option>
+																	<option value="7">7</option>
+																	<option value="8">8</option>
+																	<option value="9">9</option>
+																	<option value="10">10</option>
+																</select>
+															</p>
+															<p class="clearfix">
+																<input type="button" name="next" value="Next" class="btn_1 nxt_btn" />
+															</p>
+														</div>
+														<div role="tabpanel" class="tab-pane fade form-2" id="profile2" aria-labelledby="profile-tab">
+														<p class="clearfix">
+																<input type="button" name="next" value="Submit" class="btn_1 nxt_btn" />
+															</p>
+														</div>
+														
+								</div>
+								</form>
+								
+							</div>
+						</div>
+						<div class="footer">
+							<div class="container">
+								<div class="footer">
+									<div class="container">
+										<div class="col-md-4 col_2">
+											<h4>About Us</h4>
+											<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."</p>
+											</div>
+											<div class="col-md-2 col_2">
+											<h4>Help & Support</h4>
+											<ul class="footer_links">
+												<li><a href="#">24x7 Live help</a></li>
+												<li><a href="contact.html">Contact us</a></li>
+												<li><a href="#">Feedback</a></li>
+												<li><a href="faq.html">FAQs</a></li>
+											</ul>
+										</div>
+										<div class="col-md-2 col_2">
+											<h4>Quick Links</h4>
+											<ul class="footer_links">
+											<li><a href="privacy.html">Privacy Policy</a></li>
+											<li><a href="terms.html">Terms and Conditions</a></li>
+											<li><a href="services.html">Services</a></li>
+										</ul>
+									</div>
+									<div class="col-md-2 col_2">
+										<h4>Social</h4>
+										<ul class="footer_social">
+											<li><a href="#"><i class="fa fa-facebook fa1"> </i></a></li>
+											<li><a href="#"><i class="fa fa-twitter fa1"> </i></a></li>
+											<li><a href="#"><i class="fa fa-google-plus fa1"> </i></a></li>
+											<li><a href="#"><i class="fa fa-youtube fa1"> </i></a></li>
+										</ul>
+									</div>
+									<div class="clearfix"> </div>
+									<div class="copy">
+										<p>Copyright © 2015 Marital . All Rights Reserved  | Design by <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+									</div>
+								</div>
+							</div>
+						</body>
+					</html>																			

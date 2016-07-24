@@ -1,0 +1,475 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Happy Mary</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Marital Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap-3.1.1.min.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href='//fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
+<!----font-Awesome----->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!----font-Awesome----->
+<script>
+$(document).ready(function(){
+    $(".dropdown").hover(            
+        function() {
+            $('.dropdown-menu', this).stop( true, true ).slideDown("fast");
+            $(this).toggleClass('open');        
+        },
+        function() {
+            $('.dropdown-menu', this).stop( true, true ).slideUp("fast");
+            $(this).toggleClass('open');       
+        }
+    );
+});
+</script>
+</head>
+<body>
+
+<div ng-controller="matchesController">
+ <div class="container">
+   <div class="breadcrumb1">
+     <ul>
+        <li><a href="index1.html">Home</a></li>
+        <span class="divider">&nbsp;|&nbsp;</span>
+        <a class="current-page" href="#/">Matches</a>
+        <span class="divider">&nbsp;|&nbsp;</span>
+        <a class="current-page" href="#/">Not Contacted Yet</a>
+        <span class="divider">&nbsp;|&nbsp;</span>
+        <a class="current-page" href="#/viewed-profiles">View Profiles</a>
+		
+     </ul>
+   </div>
+	<div class="col-md-9 profile_left2">
+     <form>
+	  <div class="form_but2">
+		<label class="col-md-2 control-lable1" for="sex">Don't Show : </label>
+		<div class="col-md-10 form_radios">
+			<input type="checkbox" class="radio_1"> Don't show already viewed &nbsp;&nbsp;&nbsp;
+			<input type="checkbox" class="radio_1" checked="checked"> Don't show already contacted &nbsp;&nbsp;&nbsp;
+			<input type="checkbox" class="radio_1" checked="checked"> Show profiles with photo
+		</div>
+		<div class="clearfix"> </div>
+	  </div>
+	 </form>
+	<div class="profile_top" ng-repeat="profile in filteredProfiles | filter : { religion : religionModel}"><a href="">
+      <h2>{{profile.id}} | Profile Created for {{profile.createdBy}}</h2>
+	    <div class="col-sm-3 profile_left-top">
+	    	<img src="{{profile.img}}" class="img-responsive" alt=""/>
+	    </div>
+	    <div class="col-sm-3">
+	      <ul class="login_details1">
+			 <li>Last Login : {{profile.lastLogin}}</li>
+			 <li><p>"{{profile.status}}" More....</p></li>
+		  </ul>
+	    </div>
+	    <div class="col-sm-6">
+	    	<table class="table_working_hours">
+	        	<tbody>
+	        		<tr class="opened_1">
+						<td class="day_label1">Age / Height :</td>
+						<td class="day_value">{{profile.age}} years, {{profile.height}}</td>
+					</tr>
+				    <tr class="opened">
+						<td class="day_label1">Last Login :</td>
+						<td class="day_value">{{profile.lastLogin}}</td>
+					</tr>
+				    <tr class="opened">
+						<td class="day_label1">Religion :</td>
+						<td class="day_value">{{profile.religion}}</td>
+					</tr>
+				    <tr class="opened">
+						<td class="day_label1">Marital Status :</td>
+						<td class="day_value">{{profile.maritalStatus}}</td>
+					</tr>
+				    <tr class="opened">
+						<td class="day_label1">Location :</td>
+						<td class="day_value">{{profile.location}}</td>
+					</tr>
+				    <tr class="closed">
+						<td class="day_label1">Profile Created by :</td>
+						<td class="day_value closed"><span>{{profile.createdBy}}</span></td>
+					</tr>
+				    <tr class="closed">
+						<td class="day_label1">Education :</td>
+						<td class="day_value closed"><span>{{profile.education}}</span></td>
+					</tr>
+			    </tbody>
+		   </table>
+		   <div class="buttons">
+			   <div class="vertical">Send Mail</div>
+			   <div class="vertical">Shortlisted</div>
+			   <div class="vertical">Send Interest</div>
+		   </div>
+	    </div>
+	    <div class="clearfix"> </div>
+    </a></div>
+
+ <!--Pagination Directive-->   
+<uib-pagination total-items="profiles.length" ng-model="currentPage" ng-change="pageChanged()"></uib-pagination>
+<!--Pagination Directive-->
+</div>
+
+  <div class="col-md-3 match_right">
+  
+   
+					<div class="list_filter">
+					
+					<h2>Filter By</h2>
+						<ul> 
+							<li class="drop_deals"><span>Religion</span>
+								<div class="filter_hold">
+									<ul>
+										<li>
+											<input id="checkbox-1" class="checkbox-custom" name="checkbox-1" type="checkbox">
+											<label for="checkbox-1" class="checkbox-custom-label">hindu</label>
+										</li>
+										<li>
+											<input id="checkbox-2" class="checkbox-custom" name="checkbox-2" type="checkbox">
+											<label for="checkbox-2" class="checkbox-custom-label">Muslim</label>
+										</li>
+										<li>
+											<input id="checkbox-2" class="checkbox-custom" name="checkbox-2" type="checkbox">
+											<label for="checkbox-2" class="checkbox-custom-label">christian</label>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="drop_deals"><span>Caste</span>
+								<div class="filter_hold">
+									<ul>
+										<li>
+											<input id="checkbox-1" class="checkbox-custom" name="checkbox-1" type="checkbox">
+											<label for="checkbox-1" class="checkbox-custom-label">nadar</label>
+										</li>
+										<li>
+											<input id="checkbox-2" class="checkbox-custom" name="checkbox-2" type="checkbox">
+											<label for="checkbox-2" class="checkbox-custom-label">konar</label>
+										</li>
+										<li>
+											<input id="checkbox-2" class="checkbox-custom" name="checkbox-2" type="checkbox">
+											<label for="checkbox-2" class="checkbox-custom-label">devar</label>
+										</li>
+										<li>
+											<input id="checkbox-1" class="checkbox-custom" name="checkbox-1" type="checkbox">
+											<label for="checkbox-1" class="checkbox-custom-label">Agarwal</label>
+										</li>
+										<li>
+											<input id="checkbox-2" class="checkbox-custom" name="checkbox-2" type="checkbox">
+											<label for="checkbox-2" class="checkbox-custom-label">Arunthathiyar</label>
+										</li>
+										<li>
+											<input id="checkbox-2" class="checkbox-custom" name="checkbox-2" type="checkbox">
+											<label for="checkbox-2" class="checkbox-custom-label">Adi  Dravida</label>
+										</li>
+										<li>
+											<input id="checkbox-1" class="checkbox-custom" name="checkbox-1" type="checkbox">
+											<label for="checkbox-1" class="checkbox-custom-label">Adi  Andhra</label>
+										</li>
+										<li>
+											<input id="checkbox-2" class="checkbox-custom" name="checkbox-2" type="checkbox">
+											<label for="checkbox-2" class="checkbox-custom-label">Ad  Dharmi</label>
+										</li>
+										<li>
+											<input id="checkbox-2" class="checkbox-custom" name="checkbox-2" type="checkbox">
+											<label for="checkbox-2" class="checkbox-custom-label">Bengali  </label>
+										</li>
+										<li>
+											<input id="checkbox-1" class="checkbox-custom" name="checkbox-1" type="checkbox">
+											<label for="checkbox-1" class="checkbox-custom-label">Brahmins</label>
+										</li>
+										<li>
+											<input id="checkbox-2" class="checkbox-custom" name="checkbox-2" type="checkbox">
+											<label for="checkbox-2" class="checkbox-custom-label">Brahmins-Iyer</label>
+										</li>
+										<li>
+											<input id="checkbox-2" class="checkbox-custom" name="checkbox-2" type="checkbox">
+											<label for="checkbox-2" class="checkbox-custom-label">Brahmins-Iyenger</label>
+										</li>
+										<li>
+											<input id="checkbox-1" class="checkbox-custom" name="checkbox-1" type="checkbox">
+											<label for="checkbox-1" class="checkbox-custom-label">Brahmins-Telugu</label>
+										</li>
+										<li>
+											<input id="checkbox-2" class="checkbox-custom" name="checkbox-2" type="checkbox">
+											<label for="checkbox-2" class="checkbox-custom-label">Brahmins-Vyas</label>
+										</li>
+										<li>
+											<input id="checkbox-2" class="checkbox-custom" name="checkbox-2" type="checkbox">
+											<label for="checkbox-2" class="checkbox-custom-label">Chettiar</label>
+										</li>
+										<li>
+											<input id="checkbox-1" class="checkbox-custom" name="checkbox-1" type="checkbox">
+											<label for="checkbox-1" class="checkbox-custom-label">Tamil-Chettiar</label>
+										</li>
+										<li>
+											<input id="checkbox-2" class="checkbox-custom" name="checkbox-2" type="checkbox">
+											<label for="checkbox-2" class="checkbox-custom-label">Telugu-Chettar</label>
+										</li>
+										<li>
+											<input id="checkbox-2" class="checkbox-custom" name="checkbox-2" type="checkbox">
+											<label for="checkbox-2" class="checkbox-custom-label">Devar</label>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="drop_category"><span>Residing</span>
+								<div class="filter_hold">
+									<ul>
+										<li>
+											<input id="checkbox-8" class="checkbox-custom" name="checkbox-8" type="checkbox">
+											<label for="checkbox-8" class="checkbox-custom-label">India</label>
+										</li>
+										<li>
+											<input id="checkbox-9" class="checkbox-custom" name="checkbox-9" type="checkbox">
+											<label for="checkbox-9" class="checkbox-custom-label">United States of America</label>
+										</li>
+										<li>
+											<input id="checkbox-9" class="checkbox-custom" name="checkbox-9" type="checkbox">
+											<label for="checkbox-9" class="checkbox-custom-label">Pakistan</label>
+										</li>
+										<li>
+											<input id="checkbox-8" class="checkbox-custom" name="checkbox-8" type="checkbox">
+											<label for="checkbox-8" class="checkbox-custom-label">United Arab Emirates</label>
+										</li>
+										<li>
+											<input id="checkbox-9" class="checkbox-custom" name="checkbox-9" type="checkbox">
+											<label for="checkbox-9" class="checkbox-custom-label">United Kingdom</label>
+										</li>
+										<li>
+											<input id="checkbox-9" class="checkbox-custom" name="checkbox-9" type="checkbox">
+											<label for="checkbox-9" class="checkbox-custom-label">Australia</label>
+										</li>
+										<li>
+											<input id="checkbox-9" class="checkbox-custom" name="checkbox-9" type="checkbox">
+											<label for="checkbox-9" class="checkbox-custom-label">Saudi Arabia</label>
+										</li>
+										<li>
+											<input id="checkbox-8" class="checkbox-custom" name="checkbox-8" type="checkbox">
+											<label for="checkbox-8" class="checkbox-custom-label">Bangladesh</label>
+										</li>
+										<li>
+											<input id="checkbox-9" class="checkbox-custom" name="checkbox-9" type="checkbox">
+											<label for="checkbox-9" class="checkbox-custom-label">Canada</label>
+										</li>
+										<li>
+											<input id="checkbox-9" class="checkbox-custom" name="checkbox-9" type="checkbox">
+											<label for="checkbox-9" class="checkbox-custom-label">Afghanistan</label>
+										</li>
+										</ul>
+										</div>
+										
+							<li class="drop_brand"><span>EducationCategory</span>
+								<div class="filter_hold">
+									<ul>
+										<li>
+											<input id="checkbox-a" class="checkbox-custom" name="checkbox-a" type="checkbox">
+											<label for="checkbox-a" class="checkbox-custom-label">MA (Arts) </label>
+										</li>
+										<li>
+											<input id="checkbox-b" class="checkbox-custom" name="checkbox-b" type="checkbox">
+											<label for="checkbox-b" class="checkbox-custom-label">Masters-Engineering </label>
+										</li>
+										
+										<li>
+											<input id="checkbox-a" class="checkbox-custom" name="checkbox-a" type="checkbox">
+											<label for="checkbox-a" class="checkbox-custom-label">Bachelors-Engineering </label>
+										</li>
+										<li>
+											<input id="checkbox-b" class="checkbox-custom" name="checkbox-b" type="checkbox">
+											<label for="checkbox-b" class="checkbox-custom-label">M.Com.(Commerce</label>
+										</li>
+										
+										<li>
+											<input id="checkbox-c" class="checkbox-custom" name="checkbox-c" type="checkbox">
+											<label for="checkbox-c" class="checkbox-custom-label">M.Sc.(Science) </label>
+										</li>
+										<li>
+											<input id="checkbox-a" class="checkbox-custom" name="checkbox-a" type="checkbox">
+											<label for="checkbox-a" class="checkbox-custom-label">MA (Arts) </label>
+										</li>
+										<li>
+											<input id="checkbox-b" class="checkbox-custom" name="checkbox-b" type="checkbox">
+											<label for="checkbox-b" class="checkbox-custom-label">Masters-Engineering </label>
+										</li>
+										
+										<li>
+											<input id="checkbox-c" class="checkbox-custom" name="checkbox-c" type="checkbox">
+											<label for="checkbox-c" class="checkbox-custom-label">Engineering </label>
+										</li>
+										<li>
+											<input id="checkbox-c" class="checkbox-custom" name="checkbox-c" type="checkbox">
+											<label for="checkbox-c" class="checkbox-custom-label">Others </label>
+										</li>
+										</ul>
+										</div>
+										
+							<li class="drop_style"><span>Profession</span>
+								<div class="filter_hold">
+									<ul>
+										<li>
+											<input id="checkbox-j" class="checkbox-custom" name="checkbox-j" type="checkbox">
+											<label for="checkbox-j" class="checkbox-custom-label">software enginner</label>
+										</li>
+										<li>
+											<input id="checkbox-k" class="checkbox-custom" name="checkbox-k" type="checkbox">
+											<label for="checkbox-k" class="checkbox-custom-label">lecture</label>
+										</li>
+										<li>
+											<input id="checkbox-j" class="checkbox-custom" name="checkbox-j" type="checkbox">
+											<label for="checkbox-j" class="checkbox-custom-label">agri clerk</label>
+										</li>
+										<li>
+											<input id="checkbox-k" class="checkbox-custom" name="checkbox-k" type="checkbox">
+											<label for="checkbox-k" class="checkbox-custom-label">professor</label>
+										</li>
+										<li>
+											<input id="checkbox-k" class="checkbox-custom" name="checkbox-k" type="checkbox">
+											<label for="checkbox-k" class="checkbox-custom-label">school teacher</label>
+										</li>
+										<li>
+											<input id="checkbox-k" class="checkbox-custom" name="checkbox-k" type="checkbox">
+											<label for="checkbox-k" class="checkbox-custom-label">accountant</label>
+										</li>
+										
+										
+									</ul>
+								</div>
+							</li>
+							<li class="drop_health"><span>MotherTongue</span>
+								<div class="filter_hold">
+									<ul>
+										<li>
+											<input id="checkbox-l" class="checkbox-custom" name="checkbox-l" type="checkbox">
+											<label for="checkbox-l" class="checkbox-custom-label">Tamil</label>
+										</li>
+										<li>
+											<input id="checkbox-m" class="checkbox-custom" name="checkbox-m" type="checkbox">
+											<label for="checkbox-m" class="checkbox-custom-label">Kannade</label>
+										</li>
+										<li>
+											<input id="checkbox-l" class="checkbox-custom" name="checkbox-l" type="checkbox">
+											<label for="checkbox-l" class="checkbox-custom-label">Telungu</label>
+										</li>
+										<li>
+											<input id="checkbox-m" class="checkbox-custom" name="checkbox-m" type="checkbox">
+											<label for="checkbox-m" class="checkbox-custom-label">Hindi</labenl>
+										</li>
+										
+										<li>
+											<input id="checkbox-l" class="checkbox-custom" name="checkbox-l" type="checkbox">
+											<label for="checkbox-l" class="checkbox-custom-label">Marathi</label>
+										</li>
+										<li>
+											<input id="checkbox-m" class="checkbox-custom" name="checkbox-m" type="checkbox">
+											<label for="checkbox-m" class="checkbox-custom-label">Tulu</label>
+										</li>
+										<li>
+											<input id="checkbox-l" class="checkbox-custom" name="checkbox-l" type="checkbox">
+											<label for="checkbox-l" class="checkbox-custom-label">Sanskrit</label>
+										</li>
+										
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			
+					
+				</div>
+			
+</div>
+
+
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	<script>
+		$( ".list_filter ul li.drop_deals span" ).click(function() {
+		  $( "ul li.drop_deals .filter_hold" ).toggle( "slow" );
+		});
+		$( ".list_filter ul li.drop_category span" ).click(function() {
+		  $( "ul li.drop_category .filter_hold" ).toggle( "slow" );
+		});
+		$( ".list_filter ul li.drop_brand span" ).click(function() {
+		  $( "ul li.drop_brand .filter_hold" ).toggle( "slow" );
+		});
+		$( ".list_filter ul li.drop_style span" ).click(function() {
+		  $( "ul li.drop_style .filter_hold" ).toggle( "slow" );
+		});
+		$( ".list_filter ul li.drop_health span" ).click(function() {
+		  $( "ul li.drop_health .filter_hold" ).toggle( "slow" );a
+		});
+		$(window).scroll(function() {    
+			var scroll = $(window).scrollTop();
+
+			if (scroll >= 270) {
+				$(".best_deal_right_sticky").addClass("right_sticky");
+			} else {
+				if(scroll <= 500){
+					$(".best_deal_right_sticky").removeClass("right_sticky");
+					$(".best_deal_right_sticky").addClass("ttt");
+				}else{
+				$(".best_deal_right_sticky").removeClass("right_sticky");
+				}
+			} 
+		});
+		
+		$('#nav-list li').on('click', function() {
+		  //$('#nav-list li').not(this).find('div').hide();
+		  $(this).find('div').toggle();
+		});
+	</script>
+	
+	<style>
+.dropdowns{
+    position: relative;
+    display: inline-block;
+    border-color: red;
+    min-width: 320px;
+    text-align:left;
+    font-size:14px;
+    background: none !important;
+   }
+   .dropdowns-menu li{
+
+
+   	font-size:18px;
+   }
+
+
+
+.dropdowns-content {
+	margin-left: 43px;
+    /* margin-bottom: 43px; */
+    margin-top: -17px;
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 320px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    border: solid;
+    border-color: red;
+    background:none !important;
+
+
+.dropdowns:hover .dropdowns-content {
+    display: block;
+
+}
+</style>
+</body>
+</html>	
+
