@@ -3,7 +3,8 @@ class Profile{
     public function __construct() {
         
     }
-    public function registerProfile($data){
+    public function registerProfile($data)
+	{
             
             
                 $data = mysql_query("INSERT INTO " . DB_PREFIX . "profile SET 
@@ -43,14 +44,48 @@ class Profile{
 				fathernative = '" . mysql_escape_string($data['fathernative']) . "',
 				mothernative = '" . mysql_escape_string($data['mothernative']) . "',
 				brothers = '" . mysql_escape_string($data['brothers']) . "',
-				sisters = '" . mysql_escape_string($data['sisters']) . "',
+				sisters = '" . mysql_escape_string($data['sisters']) . "')
+
+		}
+    
+
+		public function getProfileDetails($pid)
+		{		
+        $customer_group_id = 0;
+
+		
+		$sql = "SELECT DISTINCT *, pid, name, sex, edob, caste, height, specialcase, religion, mothertonque, maritalstatus, smoking, drinking, habits, complexion, bodytype, qualification, employedin, occupation, annualincome, countrypresidence, state,, district, city, fathername, fathereducation, fatherprofession, mothername, mothereducation, motherprofession, fathernative, mothernative, brothers, sisters) FROM " . DB_PREFIX . "profile WHERE pid FROM " . DB_PREFIX . "profile ";
+		//echo $sql;
+		mysql_query("SET CHARACTER SET utf8");		
+        $sql_query = mysql_query($sql);		
+		$num_rows = mysql_num_rows($sql_query);
+		
+        $aResults = array();
+		if($num_rows > 0)
+		{
+			while($row_result = mysql_fetch_assoc($sql_query))
+			{		   
+				$aResults[] = $row_result;					
+			}
+		}
+		
+		$aData = array();
+				
+		$aData[0]['pid'] = $aResults[0]['pid'];
+		
+		
 				
 		
-					
-                       
-            
-          
-            
-        }
-    
-}
+		$aData[0]['name'] = $aResults[0]['name'];
+		
+		
+		
+		//echo "<pre />";
+		//print_r($aResults);
+		//echo "<pre />";
+		//print_r($aData); die('kk');
+        return $aData;
+    }
+
+	
+	
