@@ -39,20 +39,7 @@ $(document).ready(function(){
     <!--<div class="navbar navbar-inverse-blue navbar-fixed-top">-->
       <div class="navbar-inner">
         <div class="container">
-           <!-- <div class="navigation">
-             <nav id="colorNav">
-			   <ul>
-				<li class="green">
-					<a href="#" class="icon-home"></a>
-					<ul>
-						<li><a href="login.html">Login</a></li>
-					    <li><a href="register.html">Register</a></li>
-					    <li><a href="index.html">Logout</a></li>
-					</ul>
-				</li>
-			   </ul>
-             </nav>
-           </div> -->
+          
            <a class="brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
            <div class="pull-right">
           	<nav class="navbar nav_bottom" role="navigation">
@@ -69,8 +56,42 @@ $(document).ready(function(){
 		   <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 		        <ul class="nav navbar-nav nav_1">
-		            <li class="log_btn"><a href="login.html">Login</a><em class="sprite loginicon"></em></li>
-					<li class="reg_btn"><a href="register.html">Register</a></li>	            
+		            <li><a href="about.html">About</a></li>
+		    		<li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Matches<span class="caret"></span></a>
+		              <ul class="dropdown-menu" role="menu">
+		                <li><a href="#/">New Matches</a></li>
+		                <li><a href="#/not-contacted">Who Viewed my Profile</a></li>
+		                <li><a href="#/viewed-profiles">Viewed & not Contacted</a></li>
+		                
+		              </ul>
+		            </li>
+					<li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Search<span class="caret"></span></a>
+		              <ul class="dropdown-menu" role="menu">
+		                <li><a href="search.html">Regular Search</a></li>
+		                <li><a href="profile.html">Recently Viewed Profiles</a></li>
+		                <li><a href="search-id.html">Search By Profile ID</a></li>
+		                
+		              </ul>
+		            </li>
+		            <li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Messages<span class="caret"></span></a>
+		              <ul class="dropdown-menu" role="menu">
+		                <li><a href="inbox.html">Inbox</a></li>
+		                <li><a href="inbox.html">New</a></li>
+		                <li><a href="inbox.html">Accepted</a></li>
+		                <li><a href="sent.html">Sent</a></li>
+		               
+		              </ul>
+		            </li>
+		            <li class="dropdown-toggle"><a href="contact.html">Contacts</a></li>
+					<li class="dropdown">
+						<a href="#" class="last" data-toggle="dropdown">User Name<span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="search.html">Logout</a></li>
+							</ul>
+					</li>
 		        </ul>
 		     </div><!-- /.navbar-collapse -->
 		    </nav>
@@ -88,24 +109,11 @@ $(document).ready(function(){
     </div>
   </div>
 
-  <div class="profile_type">
-	<div>
-		<table>
-			<tr>
-				<td style="padding-right:10px;">
-					<input type="radio" name="profile" />&nbsp;Bride
-				</td>
-				<td>
-					<input type="radio" name="profile" />&nbsp;Groom
-				</td>
-			</tr>
-		</table>
-	</div>
-  </div>
+  
   <div class="profile_search">
   
   	<div class="container wrap_1">
-	  <form action="">
+	  <form action="search.php">
 	 
         
 	  	<div class="search_top">
@@ -115,7 +123,7 @@ $(document).ready(function(){
 		  <label class="gender_1">I am looking for :</label>
 			<div class="age_box1" style="max-width: 100%; display: inline-block;">
 				<select>
-					<option >
+					<option name="gender">
 					<option value="male">Male</option>
 					<option value="female">Female</option>
 				</select>
@@ -124,61 +132,131 @@ $(document).ready(function(){
         <div class="inline-block">
 		  <label class="gender_1">State :</label>
 			<div class="age_box1" style="max-width: 100%; display: inline-block;">
-				<select>
+				<select name="state">
 					<option value="">* Select State</option>
 					
-																	<option value="Andaman and Nicobar">Andaman and Nicobar</option>
-																	<option value="Andhra Pradesh">Andhra Pradesh</option>
-																	<option value="Arunachal Pradesh">Arunachal Pradesh</option>
-																	<option value="Assam">Assam</option>
-																	<option value="Bihar">Bihar</option>
-																	<option value="Chandigarh">Chandigarh</option>
-																	<option value="Chhattisgarh">Chhattisgarh</option>
-																	<option value="Daman and Diu">Daman and Diu</option>
-																	<option value="Delhi">Delhi</option>
+																	<option value="Tamil Nadu">Tamil Nadu</option>							
+										<option value="Andhra Pradesh">Andhra Pradesh</option>
+										<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+										<option value="Karnataka">Karnataka</option>
+										<option value="Kerala">Kerala</option>
+										<option value="Assam">Assam</option>
+										<option value="Bihar">Bihar</option>
+										<option value="Chandigarh">Chandigarh</option>
+										<option value="Chhattisgarh">Chhattisgarh</option>
+										<option value="Delhi">Delhi</option>
+										<option value="Goa">Goa</option>
+										<option value="Gujarat">Gujarat</option>
+										<option value="Haryana">Haryana</option>
+										<option value="Himachal Pradesh">Himachal Pradesh</option>
+										<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+										<option value="Jharkhand">Jharkhand</option>
+										<option value="Karnataka">Karnataka</option>
+										<option value="Kerala">Kerala</option>
+										<option value="Madhya Pradesh">Madhya Pradesh</option>
+										<option value="Maharashtra">Maharashtra</option>
+										<option value="Manipur">Manipur</option>
+										<option value="Meghalaya">Meghalaya</option>
+										<option value="Mizoram">Mizoram</option>
+										<option value="Nagaland">Nagaland</option>
+										<option value="Orissa">Orissa</option>
+										<option value="Pondicherry">Pondicherry</option>
+										<option value="Punjab">Punjab</option>
+										<option value="Rajasthan">Rajasthan</option>
+										<option value="Sikkim">Sikkim</option>
+										<option value="Tripura">Tripura</option>
+										<option value="Uttar Pradesh">Uttar Pradesh</option>
+										<option value="Uttaranchal">Uttaranchal</option>
+										<option value="West Bengal">West Bengal</option>
                </select>
           </div>
         </div>
         <div class="inline-block">
 		  <label class="gender_1">Mother Tongue :</label>
 			<div class="age_box1" style="max-width: 100%; display: inline-block;">
-				<select>
+				<select name="mothertongue">
+				<option value="">Select Mother Tongue</option>
 				<option value="Tamil">Tamil</option>
+			    <option value="Telugu">Telugu</option>
+				<option value="Kannada">Kannada</option>
+				 <option value="Malayalam">Malayalam</option>
+			     <option value="Marathi">Marathi</option>
+				 <option value="Hindi">Hindi</option>
+			     <option value="Punjabi">Punjabi</option>
+				<option value="Bengali">Bengali</option>
+				<option value="Gujarati">Gujarati</option>
+				<option value="Bihari">Bihari</option>
+				<option value="Urdu">Urdu</option>
+				<option value="Oriya">Oriya</option>
+				<option value="Marwari">Marwari</option>
 				<option value="English">English</option>
-				<option value="Hindi">Hindi</option>
-																	<option value="Marathi">Marathi</option>
-																	<option value="Monpa">Monpa</option>
-																	<option value="Nicobarese">Nicobarese</option>
-																	<option value="Nepali">Nepali</option>
-																	<option value="Portuguese">Portuguese</option>
-																	<option value="Pushtu">Pushtu</option>
-																	<option value="Rajasthani">Rajasthani</option>
-																	<option value="Sanskrit">Sanskrit</option>
-																	<option value="Santhali">Santhali</option>
-																	<option value="Singhalese">Singhalese</option>
-																	<option value="Sourashtra">Sourashtra</option>
-																	<option value="Tripuri">Tripuri</option>
-																	<option value="Tulu">Tulu</option>
-																	<option value="Others">Others</option>
+				<option value="Sindhi">Sindhi</option>
+				<option value="Arunachali">Arunachali</option>
+				<option value="Assamese">Assamese</option>
+				<option value="Awadhi">Awadhi</option>
+				<option value="Bhojpuri">Bhojpuri</option>
+				<option value="Bhutia/Sikkimese">Bhutia/Sikkimese</option>
+				<option value="Brij">Brij</option>
+				<option value="Badaga">Badaga</option>
+				<option value="Chatisgarhi">Chatisgarhi</option>
+				<option value="Coorgi">Coorgi</option>
+				<option value="Dhivehi">Dhivehi</option>
+				<option value="Dogri">Dogri</option>
+				<option value="Foreign language">Foreign language</option>
+				<option value="French">French</option>
+				<option value="Garhwali">Garhwali</option>
+				<option value="Garo">Garo</option>
+				<option value="Haryanvi">Haryanvi</option>
+				<option value="Himachali/Pahari">Himachali/Pahari</option>
+				<option value="Jaintia">Jaintia</option>
+				<option value="Kanauji">Kanauji</option>
+				<option value="Kashmiri">Kashmiri</option>
+				<option value="Khandesi">Khandesi</option>
+				<option value="Khasi">Khasi</option>
+				<option value="Konkani">Konkani</option>
+				<option value="Koshali">Koshali</option>
+				<option value="Kumoani">Kumoani</option>
+				<option value="Kutchi">Kutchi</option>
+				<option value="Ladacki">Ladacki</option>
+				<option value="Lepcha">Lepcha</option>
+				<option value="Limbu">Limbu</option>
+				<option value="Magahi">Magahi</option>
+				<option value="Maithili">Maithili</option>
+				<option value="Manipuri">Manipuri</option>
+				<option value="Miji">Miji</option>
+				<option value="Mizo">Mizo</option>
+				<option value="Monpa">Monpa</option>
+				<option value="Nicobarese">Nicobarese</option>
+				<option value="Nepali">Nepali</option>
+				<option value="Portuguese">Portuguese</option>
+				<option value="Pushtu">Pushtu</option>
+				<option value="Rajasthani">Rajasthani</option>
+				<option value="Sanskrit">Sanskrit</option>
+				<option value="Santhali">Santhali</option>
+				<option value="Singhalese">Singhalese</option>
+				<option value="Sourashtra">Sourashtra</option>
+				<option value="Tripuri">Tripuri</option>
+				<option value="Tulu">Tulu</option>
+				<option value="Others">Others</option>
                </select>
           </div>
        </div>
      </div>
-	 <div class="inline-block">
+	 <!--<div class="inline-block">
 	   <div class="age_box2" style="max-width: 220px;">
 	   	<label class="gender_1">Age :</label>
 	    <input class="transparent" placeholder="From:" style="width: 34%;" type="text" value="">&nbsp;-&nbsp;<input class="transparent" placeholder="To:" style="width: 34%;" type="text" value="">
 	   </div>
-	 </div>
+	 </div>-->
        <div class="inline-block">
 		  <label class="gender_1">Maritial Status :</label>
 			<div class="age_box1" style="max-width: 100%; display: inline-block;">
-				<select>
+				<select name="maritialstatus">
 					<option value="">* Select Status</option>
 					<option value="Never Married" selected="selected">Never Married</option>
-																	<option value="Annulled">Annulled</option>
-																	<option value="Divorced">Divorced</option>
-																	<option value="Widowed">Widowed</option>
+					<option value="Annulled">Annulled</option>
+					<option value="Divorced">Divorced</option>
+					<option value="Widowed">Widowed</option>
 				</select>
 		  </div>
 	    </div>
