@@ -130,28 +130,28 @@ $(document).ready(function(){
    </div>
    <div class="services">
    	  <div class="col-sm-6 login_left">
-	     <form action="index.html" data-validate="live">
+	     <form action="index.html" data-validate="live" action="register.php">
 		             
           <div class="form-group">
 		      <label for="User Name">User Name :</label>
-                        <input type="username" class="form-control" autocomplete="off" id="username" placeholder="UserName" data-validate="required,minlength:6">
+                        <input type="username" name="username" class="form-control" autocomplete="off" id="username" placeholder="UserName" data-validate="required,minlength:6">
 		    </div>
 			
 	  	    <div class="form-group">
 		      <label for="email">Email address :</label>
-                        <input type="email" class="form-control" autocomplete="off" id="email" placeholder="Email" data-validate="required,email">
+                        <input type="email" name="email" class="form-control" autocomplete="off" id="email" placeholder="Email" data-validate="required,email">
 		    </div>
 		    <div class="form-group">
 		       <label for="password">Password :</label>
-                        <input type="password" class="form-control" autocomplete="off" id="password" placeholder="Password" data-validate="required,minlength:8,maxlength:16">
+                        <input type="password" name="password" class="form-control" autocomplete="off" id="password" placeholder="Password" data-validate="required,minlength:8,maxlength:16">
 		    </div>
 		    <div class="form-group">
 		     <label for="password2">Confirm password :</label>
-                        <input type="password" class="form-control" autocomplete="off" id="password2" placeholder="Confirm password" data-validate="matches:password">
+                        <input type="password" name="password" class="form-control" autocomplete="off" id="password2" placeholder="Confirm password" data-validate="matches:password">
 		    </div>
 			<div class="form-group">
 		          <label for="phone">MobileNo :</label>
-                        <input type="tel" class="form-control" autocomplete="off" id="mobileno" placeholder="Mobile" data-validate="required,tel_us">
+                        <input type="tel" name="mobileno" class="form-control" autocomplete="off" id="mobileno" placeholder="Mobile" data-validate="required,tel_us">
 						</div>
 						
 			  <div class="form-actions">

@@ -173,7 +173,7 @@ $(document).ready(function(){
    </div>
    <div class="services">
    	  <div class="col-sm-6 login_left">
-	   <form name="myForm" onsubmit="return(validate());">
+	   <form name="myForm" onsubmit="return(validate());" action="login.php">
 	    <div id="errorBox"></div>
   	    <div class="form-item form-type-textfield form-item-name">
 	      <label for="edit-name">Username <span class="form-required" title="This field is required.">*</span></label>
@@ -181,7 +181,7 @@ $(document).ready(function(){
 	    </div>
 	 <div class="form-item form-type-password form-item-pass" >
 	      <label for="edit-pass" >Password <span class="form-required"  title="This field is required.">*</span></label>
-	       <input data-toggle="password" data-placement="before" class="form-control" type="password"  value="" placeholder="password">
+	       <input data-toggle="password" data-placement="before" class="form-control" name="password" type="password"  value="" placeholder="password">
 		   
 		  
 	    </div>
